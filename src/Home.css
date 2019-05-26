@@ -1,0 +1,39 @@
+ul {
+    list-style-type: none;
+    background-color: darkcyan;
+    border-radius: 5px;
+    margin: 0px;
+    /* padding: 10px 20px; */
+}
+
+.nav-link {
+    font-size: 2em;
+    font-weight: bolder;
+}
+
+.description {
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.4em;
+    padding-right: 40px;
+}
+
+li a {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.home {
+    margin: 15% auto;
+    width: 50%;
+    /* border: 1px burlywood solid; */
+}
+
+.sign-up {
+    float: right;
+    padding: 1em 8em;
+    margin-top: 3em;
+    border-radius: 5px;
+    background-color: green;
+    color: whitesmoke;
+}
