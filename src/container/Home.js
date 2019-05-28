@@ -1,7 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import Popup from 'reactjs-popup';
 import '../Home.css';
 
+const contentStyle = {
+    maxWidth: '600px',
+    width: '90%'
+}
 export default class Home extends Component {
     render() {
         return(
@@ -20,7 +25,32 @@ export default class Home extends Component {
                     passengers to join available ride offers.<br/><br/>
                     by clicking the button below you can sign-up as driver or request a ride.
                 </p>
-                <button className='sign-up'>SIGN UP/REQUEST</button>
+                <Popup trigger = {<button className='button'>SIGN-UP/CREATE REQUEST</button>}
+                    modal
+                    contentStyle = { contentStyle }
+                >
+                    { close => (
+                        <div className='modal'>
+                            <a className='close' onClick={ close }>
+                                &times;
+                            </a>
+                            <div className='header'>First Time User?</div>
+                            <div className='content'>
+                                {' '}
+                                <div>
+                                    want to join our amazing drivers' team?
+                                    <button className='button'>SIGN UP HERE</button>
+                                </div>
+                                <div>
+                                    to see available ride offer or make a request please
+                                    <button className='button'>CREATE ONE TIME PROFILE</button>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    )}
+                </Popup>
+
             </div>
             </div>
         );
