@@ -8,6 +8,16 @@ const contentStyle = {
     width: '90%'
 }
 export default class Home extends Component {
+    constructor(props) {
+        super(props);
+        this.routeChange = this.routeChange.bind(this);
+    }
+
+    routeChange() {
+        let path = '/sign-up';
+        this.props.history.push(path);
+    }
+
     render() {
         return(
             <div className='container'>
@@ -39,7 +49,7 @@ export default class Home extends Component {
                                 {' '}
                                 <div>
                                     want to join our amazing drivers' team?
-                                    <button className='button'>SIGN UP HERE</button>
+                                    <button className='button' onClick={ this.routeChange }>SIGN UP HERE</button>
                                 </div>
                                 <div>
                                     to see available ride offer or make a request please
